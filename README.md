@@ -1,1 +1,1 @@
-luminous-kitsune-db341f.netlify.app
+https://luminous-kitsune-db341f.netlify.app
