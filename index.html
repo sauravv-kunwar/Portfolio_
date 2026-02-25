@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav Kunwar - Advanced Tech Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Advanced Tech Background -->
+    <div class="tech-background" id="techBg">
+        <canvas id="matrixCanvas"></canvas>
+        <div class="particles-container" id="particles"></div>
+    </div>
+
+    <!-- Floating Tech Elements -->
+    <div class="floating-tech">
+        <div class="floating-icon"><i class="fab fa-html5"></i></div>
+        <div class="floating-icon"><i class="fab fa-css3-alt"></i></div>
+        <div class="floating-icon"><i class="fab fa-js"></i></div>
+        <div class="floating-icon"><i class="fab fa-python"></i></div>
+        <div class="floating-icon"><i class="fas fa-database"></i></div>
+        <div class="floating-icon"><i class="fab fa-react"></i></div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="glass-nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="#home" class="logo-link">
+                        <span class="logo-text">SK</span>
+                        <span class="logo-full">Saurav Kunwar</span>
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> About</a></li>
+                    <li><a href="#skills" class="nav-link"><i class="fas fa-code"></i> Skills</a></li>
+                    <li><a href="#projects" class="nav-link"><i class="fas fa-project-diagram"></i> Projects</a></li>
+                    <li><a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                </ul>
+                <div class="nav-controls">
+                    <button id="themeToggle" class="theme-btn">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button id="soundToggle" class="sound-btn">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Hello, I'm</span>
+                        <span class="typing-text">Saurav Kunwar</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <div class="role-tags">
+                            <span class="role-tag">Computer Engineer</span>
+                            <span class="role-tag">Web Developer</span>
+                            <span class="role-tag">Data Science Enthusiast</span>
+                        </div>
+                        <p class="hero-description">
+                            Crafting digital experiences with code and data
+                        </p>
+                    </div>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn-primary">
+                            <i class="fas fa-rocket"></i> View My Work
+                        </a>
+                        <a href="#contact" class="btn-secondary">
+                            <i class="fas fa-paper-plane"></i> Get In Touch
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="code-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="terminal-title">saurav@portfolio:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">whoami</span>
+                            </div>
+                            <div class="terminal-line output">
+                                Saurav Kunwar - Computer Engineering Student
+                            </div>
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command typing" id="terminalCommand"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <p>Scroll to explore</p>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-grid">
+                    <div class="about-card glass-card">
+                        <div class="about-image">
+                            <img src="me.jpg" alt="Saurav Kunwar" class="profile-img">
+                            <div class="image-overlay">
+                                <div class="status-indicator">
+                                    <span class="status-dot"></span>
+                                    <span>Available for projects</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about-info">
+                            <h3>Saurav Kunwar</h3>
+                            <p class="about-text">
+                                Computer Engineering student at Kantipur Engineering College (Affiliated to Tribhuvan University) with passion for creating innovative web solutions and exploring data science.
+                            </p>
+                            <div class="education-info">
+                                <h4><i class="fas fa-graduation-cap"></i> Education</h4>
+                                <p>Bachelor's in Computer Engineering</p>
+                                <p class="location"><i class="fas fa-map-marker-alt"></i> Dhapakhel, Lalitpur</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="interactive-stats glass-card">
+                        <h3><i class="fas fa-chart-line"></i> Quick Stats</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number" data-target="15">0</span>
+                                    <span class="stat-label">Projects Completed</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number" data-target="1200">0</span>
+                                    <span class="stat-label">Coding Hours</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number" data-target="8">0</span>
+                                    <span class="stat-label">Technologies</span>
+                                </div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="stat-content">
+                                    <span class="stat-number" data-target="5">0</span>
+                                    <span class="stat-label">Collaborations</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-container">
+                    <div class="skills-category glass-card">
+                        <h3><i class="fas fa-laptop-code"></i> Web Development</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML/CSS</span>
+                                    <span class="skill-percent">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript</span>
+                                    <span class="skill-percent">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React</span>
+                                    <span class="skill-percent">70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-category glass-card">
+                        <h3><i class="fas fa-chart-bar"></i> Data Science</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-percent">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Pandas/Numpy</span>
+                                    <span class="skill-percent">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Data Visualization</span>
+                                    <span class="skill-percent">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-visual glass-card">
+                        <h3><i class="fas fa-cogs"></i> Tech Stack</h3>
+                        <div class="tech-stack">
+                            <div class="tech-item" data-tech="html">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="tech-item" data-tech="css">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="tech-item" data-tech="js">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="tech-item" data-tech="react">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-item" data-tech="python">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="tech-item" data-tech="git">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="tech-item" data-tech="database">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="tech-item" data-tech="vscode">
+                                <i class="fas fa-code"></i>
+                                <span>VS Code</span>
+                            </div>
+                        </div>
+                        <div class="stack-info" id="stackInfo">
+                            Hover over a technology to see details
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-carousel">
+                    <div class="carousel-container">
+                        <div class="project-card glass-card">
+                            <div class="project-header">
+                                <h3>Amazon Clone</h3>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">Frontend</span>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p>A fully responsive Amazon homepage clone with modern UI/UX implementation.</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-check"></i> Responsive Design</span>
+                                    <span><i class="fas fa-check"></i> Modern UI</span>
+                                    <span><i class="fas fa-check"></i> Clean Code</span>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/sauravv-kunwar" class="project-link">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card glass-card">
+                            <div class="project-header">
+                                <h3>Interactive Portfolio</h3>
+                                <div class="project-tags">
+                                    <span class="tag">HTML</span>
+                                    <span class="tag">CSS</span>
+                                    <span class="tag">JavaScript</span>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-user-circle"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p>Modern portfolio website with interactive elements and smooth animations.</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-check"></i> Interactive UI</span>
+                                    <span><i class="fas fa-check"></i> Dark Mode</span>
+                                    <span><i class="fas fa-check"></i> Responsive</span>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/sauravv-kunwar" class="project-link">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="project-card glass-card">
+                            <div class="project-header">
+                                <h3>Data Analysis Dashboard</h3>
+                                <div class="project-tags">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Pandas</span>
+                                    <span class="tag">Matplotlib</span>
+                                </div>
+                            </div>
+                            <div class="project-image">
+                                <div class="image-placeholder">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <p>Data visualization dashboard for analyzing and presenting insights from datasets.</p>
+                                <div class="project-features">
+                                    <span><i class="fas fa-check"></i> Data Processing</span>
+                                    <span><i class="fas fa-check"></i> Visualization</span>
+                                    <span><i class="fas fa-check"></i> Interactive Charts</span>
+                                </div>
+                            </div>
+                            <div class="project-footer">
+                                <a href="https://github.com/sauravv-kunwar" class="project-link">
+                                    <i class="fab fa-github"></i> View Code
+                                </a>
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-controls">
+                        <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+                        <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-container">
+                    <div class="contact-info glass-card">
+                        <h3><i class="fas fa-paper-plane"></i> Contact Information</h3>
+                        <div class="contact-list">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Email</h4>
+                                    <a href="mailto:saurabkunwar5@gmail.com">saurabkunwar5@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://linkedin.com/in/saurav-kunwar" target="_blank">saurav-kunwar</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fab fa-github"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/sauravv-kunwar" target="_blank">sauravv-kunwar</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact-details">
+                                    <h4>Location</h4>
+                                    <p>Beldandi, Kanchanpur, Nepal</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/sauravv-kunwar" class="social-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/saurav-kunwar" class="social-link">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://instagram.com/_sauravvvvvvv" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form glass-card">
+                        <h3><i class="fas fa-comment-dots"></i> Send a Message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" id="name" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="subject" placeholder="Subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">SK</span>
+                    <span class="logo-full">Saurav Kunwar</span>
+                </div>
+                <p class="footer-text">
+                    Computer Engineering Student & Tech Enthusiast
+                </p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="copyright">
+                    <p>&copy; <span id="currentYear"></span> Saurav Kunwar. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">Initializing Portfolio...</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
